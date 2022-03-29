@@ -14,7 +14,7 @@ package com.company.twosum;
  * @date 2022/3/22 15:12
  * @version:1.0
  */
-public class Solution {
+public class twoSum {
     public static void main(String[] args) {
         System.out.println("test");
     }
@@ -28,6 +28,21 @@ public class Solution {
                     result[1] = j;
                     return result;
                 }
+            }
+        }
+        return result;
+    }
+
+    public int[] twoSum2(int[] nums, int target) {
+        int[] result = new int[2];
+        int mid = nums.length / 2;
+        for (int i = 0; i < nums.length / 2; i++) {
+            if (nums[i] + nums[i + mid] == target) {
+                result[0] = i;
+                result[1] = i + mid;
+                return result;
+            }else if(nums[i] + nums[i + mid] < target){
+
             }
         }
         return result;
